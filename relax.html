@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#070B1A"
+  >
+
+  <title>
+    Relax — Chill Planet
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/animations.css"
+  >
+</head>
+
+
+<body class="relax-page">
+
+
+<!-- ===================================================== -->
+<!-- NAVIGATION -->
+<!-- ===================================================== -->
+
+<header class="topbar">
+
+  <a
+    class="brand"
+    href="index.html"
+  >
+
+    <span class="brand-orb">
+      CP
+    </span>
+
+    <span>
+      CHILL PLANET
+    </span>
+
+  </a>
+
+
+  <nav id="mainNav">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="play.html">
+      Play
+    </a>
+
+    <a href="challenge.html">
+      Challenge
+    </a>
+
+    <a
+      href="relax.html"
+      class="active"
+    >
+      Relax
+    </a>
+
+    <a href="sponsors.html">
+      Sponsors
+    </a>
+
+  </nav>
+
+
+  <div class="nav-actions">
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- ===================================================== -->
+<!-- MAIN RELAX ZONE -->
+<!-- ===================================================== -->
+
+<main
+  class="container section narrow center"
+  id="relaxMain"
+>
+
+
+  <!-- =================================================== -->
+  <!-- TOP -->
+  <!-- =================================================== -->
+
+  <div class="relax-top-actions">
+
+    <button
+      id="ambientToggle"
+      class="btn btn-small btn-ghost"
+      type="button"
+    >
+      ♫ Play Space Ambience
+    </button>
+
+  </div>
+
+
+  <span class="eyebrow">
+    RELAX ZONE
+  </span>
+
+
+  <h1>
+    Your mind deserves a softer moment.
+  </h1>
+
+
+  <p class="lead">
+    No score. No pressure. Just a small space to reset.
+  </p>
+
+
+
+  <!-- =================================================== -->
+  <!-- BREATHING -->
+  <!-- =================================================== -->
+
+  <section
+    class="breathing-card glass-card"
+  >
+
+    <div
+      class="breathing-orb"
+      id="breathingOrb"
+    >
+
+      <span id="breathingText">
+        Breathe In
+      </span>
+
+    </div>
+
+
+    <p class="muted">
+
+      Follow the circle slowly:
+      breathe in, hold, breathe out.
+
+    </p>
+
+
+    <button
+      class="btn btn-ghost"
+      id="breathingToggle"
+      type="button"
+    >
+      Pause Breathing
+    </button>
+
+  </section>
+
+
+
+  <!-- =================================================== -->
+  <!-- HOPE / REFLECTION -->
+  <!-- =================================================== -->
+
+  <section
+    class="quote-card glass-card"
+  >
+
+    <span class="badge">
+      A LITTLE HOPE
+    </span>
+
+
+    <blockquote id="quoteText">
+
+      You do not need to solve
+      your whole life today.
+
+    </blockquote>
+
+
+    <p id="reflectionText">
+
+      Do the next kind and useful
+      thing you can manage.
+
+    </p>
+
+
+    <button
+      class="btn btn-primary"
+      id="anotherQuote"
+      type="button"
+    >
+      Give Me Another
+    </button>
+
+  </section>
+
+
+
+  <!-- =================================================== -->
+  <!-- REAL RELAX AUDIO -->
+  <!-- =================================================== -->
+
+  <section
+    class="sound-panel glass-card"
+  >
+
+    <span class="eyebrow">
+      CHOOSE YOUR WORLD
+    </span>
+
+
+    <h2>
+      Relaxing Sounds
+    </h2>
+
+
+    <p class="muted">
+
+      Choose an atmosphere,
+      get comfortable and let
+      Chill Planet play.
+
+    </p>
+
+
+    <div class="sound-buttons">
+
+
+      <!-- RAIN -->
+
+      <button
+        class="sound-btn"
+        data-sound="rain"
+        data-image="assets/images/relax/rain.jpg"
+        type="button"
+      >
+        <span class="sound-icon">
+          ☂
+        </span>
+
+        <span class="sound-name">
+          Rain
+        </span>
+      </button>
+
+
+      <!-- WAVES -->
+
+      <button
+        class="sound-btn"
+        data-sound="waves"
+        data-image="assets/images/relax/waves.jpg"
+        type="button"
+      >
+        <span class="sound-icon">
+          ≈
+        </span>
+
+        <span class="sound-name">
+          Waves
+        </span>
+      </button>
+
+
+      <!-- SPACE -->
+
+      <button
+        class="sound-btn"
+        data-sound="space"
+        data-image="assets/images/relax/space.jpg"
+        type="button"
+      >
+        <span class="sound-icon">
+          ✦
+        </span>
+
+        <span class="sound-name">
+          Space
+        </span>
+      </button>
+
+
+      <!-- FOREST -->
+
+      <button
+        class="sound-btn"
+        data-sound="forest"
+        data-image="assets/images/relax/forest.jpg"
+        type="button"
+      >
+        <span class="sound-icon">
+          ♧
+        </span>
+
+        <span class="sound-name">
+          Forest
+        </span>
+      </button>
+
+
+      <!-- LOFI -->
+
+      <button
+        class="sound-btn"
+        data-sound="lofi"
+        data-image="assets/images/relax/lofi-chill.jpg"
+        type="button"
+      >
+        <span class="sound-icon">
+          ♫
+        </span>
+
+        <span class="sound-name">
+          Lo-fi Chill
+        </span>
+      </button>
+
+
+      <!-- SILENCE -->
+
+      <button
+        class="sound-btn sound-stop"
+        data-sound="off"
+        type="button"
+      >
+        <span class="sound-icon">
+          ■
+        </span>
+
+        <span class="sound-name">
+          Silence
+        </span>
+      </button>
+
+
+    </div>
+
+
+    <!-- CURRENT SOUND -->
+
+    <div
+      class="current-sound"
+      id="currentSound"
+      aria-live="polite"
+    >
+
+      <span id="currentSoundIcon">
+        ♫
+      </span>
+
+      <span id="currentSoundText">
+        Choose a sound
+      </span>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================================== -->
+  <!-- RELAX REMINDER -->
+  <!-- =================================================== -->
+
+  <section
+    class="glass-card relax-reminder"
+  >
+
+    <span class="badge">
+      CHILL PLANET
+    </span>
+
+
+    <h2>
+      Stay here as long as you need.
+    </h2>
+
+
+    <p class="muted">
+
+      There is nothing to win here.
+      Breathe, listen, read a message
+      and return when you are ready.
+
+    </p>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
+
+<footer class="footer">
+
+  <span>
+    Built by Eng. Amiim Tumwekwase
+  </span>
+
+</footer>
+
+
+
+<!-- ===================================================== -->
+<!-- JAVASCRIPT -->
+<!-- ===================================================== -->
+
+<script
+  type="module"
+  src="js/relax.js"
+></script>
+
+<script
+  src="js/navigation.js"
+></script>
+
+
+</body>
+
+</html>

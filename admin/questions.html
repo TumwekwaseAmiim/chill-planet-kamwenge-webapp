@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Questions Admin — Chill Planet
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="../css/style.css"
+  >
+
+</head>
+
+
+<body class="admin-body">
+
+
+  <!-- =====================================================
+       ADMIN HEADER
+  ====================================================== -->
+
+  <header class="topbar compact">
+
+
+    <a
+      class="brand"
+      href="dashboard.html"
+    >
+
+      <span class="brand-orb">
+        CP
+      </span>
+
+      <span>
+        ADMIN
+      </span>
+
+    </a>
+
+
+    <nav>
+
+      <a href="dashboard.html">
+        Dashboard
+      </a>
+
+      <a
+        class="active"
+        href="questions.html"
+      >
+        Questions
+      </a>
+
+      <a href="sponsors.html">
+        Sponsors
+      </a>
+
+      <a href="content.html">
+        Relax Content
+      </a>
+
+      <a href="../index.html">
+        Open App
+      </a>
+
+    </nav>
+
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ====================================================== -->
+
+  <main class="container section">
+
+
+    <span class="eyebrow">
+      QUESTION BANK
+    </span>
+
+
+    <h1>
+      Manage Questions
+    </h1>
+
+
+    <p class="muted">
+      Add custom Kamwenge or General questions to Chill Planet.
+    </p>
+
+
+    <div class="two-col">
+
+
+      <!-- =================================================
+           ADD QUESTION
+      ================================================== -->
+
+      <section class="glass-card">
+
+
+        <h2>
+          Add Question
+        </h2>
+
+
+        <form id="questionForm">
+
+
+          <label>
+
+            Question world
+
+            <select
+              id="qWorld"
+              required
+            >
+
+              <option value="general">
+                General
+              </option>
+
+              <option value="kamwenge">
+                Kamwenge
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <label>
+
+            Category
+
+            <input
+              id="qCategory"
+              type="text"
+              value="General"
+              placeholder="Example: Uganda"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Question
+
+            <textarea
+              id="qText"
+              placeholder="Enter the question"
+              required
+            ></textarea>
+
+          </label>
+
+
+          <label>
+
+            Correct answer
+
+            <input
+              id="qCorrect"
+              type="text"
+              placeholder="Correct answer"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Wrong answer 1
+
+            <input
+              id="qWrong1"
+              type="text"
+              placeholder="Wrong answer"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Wrong answer 2
+
+            <input
+              id="qWrong2"
+              type="text"
+              placeholder="Wrong answer"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Wrong answer 3
+
+            <input
+              id="qWrong3"
+              type="text"
+              placeholder="Wrong answer"
+              required
+            >
+
+          </label>
+
+
+          <button
+            class="btn btn-primary"
+            type="submit"
+          >
+            Add Question
+          </button>
+
+
+          <p
+            id="questionMessage"
+            class="feedback"
+            aria-live="polite"
+          ></p>
+
+
+        </form>
+
+
+      </section>
+
+
+      <!-- =================================================
+           CURRENT QUESTIONS
+      ================================================== -->
+
+      <section class="glass-card">
+
+
+        <div class="admin-section-heading">
+
+          <div>
+
+            <span class="eyebrow">
+              FIRESTORE
+            </span>
+
+            <h2>
+              Current Questions
+            </h2>
+
+          </div>
+
+
+          <button
+            id="refreshQuestions"
+            class="btn btn-small btn-ghost"
+            type="button"
+          >
+            Refresh
+          </button>
+
+        </div>
+
+
+        <div
+          id="questionList"
+          class="admin-list"
+        >
+
+          <p class="muted">
+            Loading questions...
+          </p>
+
+        </div>
+
+
+      </section>
+
+
+    </div>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       ADMIN JAVASCRIPT
+  ====================================================== -->
+
+  <script
+    type="module"
+    src="../js/admin.js"
+  ></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#070B1A"
+  >
+
+  <meta
+    name="application-name"
+    content="Chill Planet"
+  >
+
+  <meta
+    name="author"
+    content="Eng. Amiim Tumwekwase"
+  >
+
+  <meta
+    name="description"
+    content="Chill Planet is a fun and relaxing web app where you can play endless quizzes, explore Kamwenge knowledge, challenge friends, relax with calming sounds and reflections, and share your achievements."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+
+  <title>
+    Chill Planet — Play. Relax. Share.
+  </title>
+
+
+  <!-- =================================================== -->
+  <!-- PWA -->
+  <!-- =================================================== -->
+
+  <link
+    rel="manifest"
+    href="manifest.json"
+  >
+
+
+  <!-- =================================================== -->
+  <!-- ICONS -->
+  <!-- =================================================== -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="assets/icons/icon-32.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="assets/icons/icon-192.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="assets/icons/icon-180.png"
+  >
+
+
+  <!-- =================================================== -->
+  <!-- APPLE PWA -->
+  <!-- =================================================== -->
+
+  <meta
+    name="apple-mobile-web-app-capable"
+    content="yes"
+  >
+
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  >
+
+  <meta
+    name="apple-mobile-web-app-title"
+    content="Chill Planet"
+  >
+
+
+  <!-- =================================================== -->
+  <!-- SOCIAL SHARING -->
+  <!-- =================================================== -->
+
+  <meta
+    property="og:title"
+    content="Chill Planet — Play. Relax. Share."
+  >
+
+  <meta
+    property="og:description"
+    content="Play endless quizzes, explore Kamwenge knowledge, challenge friends, relax with calming sounds and reflections, and share your achievements."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Chill Planet"
+  >
+
+  <meta
+    property="og:url"
+    content="https://tumwekwaseamiim.github.io/chill-planet-kamwenge-webapp/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://tumwekwaseamiim.github.io/chill-planet-kamwenge-webapp/assets/icons/app-icon-square.png"
+  >
+
+
+  <!-- =================================================== -->
+  <!-- X / TWITTER -->
+  <!-- =================================================== -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Chill Planet — Play. Relax. Share."
+  >
+
+  <meta
+    name="twitter:description"
+    content="Play endless quizzes, explore Kamwenge knowledge, challenge friends, relax and share your Chill Planet achievements."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://tumwekwaseamiim.github.io/chill-planet-kamwenge-webapp/assets/icons/app-icon-square.png"
+  >
+
+
+  <!-- =================================================== -->
+  <!-- DEVELOPER -->
+  <!-- =================================================== -->
+
+  <meta
+    name="developer"
+    content="Eng. Amiim Tumwekwase"
+  >
+
+  <meta
+    name="copyright"
+    content="Chill Planet — Built by Eng. Amiim Tumwekwase"
+  >
+
+
+  <!-- =================================================== -->
+  <!-- STYLES -->
+  <!-- =================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/animations.css"
+  >
+
+</head>
+
+
+<body class="planet-body">
+
+
+  <!-- =================================================== -->
+  <!-- GLOBAL PLANET AMBIENCE -->
+  <!-- =================================================== -->
+
+  <div
+    class="space-background"
+    aria-hidden="true"
+  >
+
+    <div class="nebula nebula-one"></div>
+    <div class="nebula nebula-two"></div>
+    <div class="nebula nebula-three"></div>
+
+    <div class="stars"></div>
+    <div class="stars stars-2"></div>
+    <div class="stars stars-3"></div>
+
+    <span
+      class="shooting-star shooting-star-one"
+    ></span>
+
+    <span
+      class="shooting-star shooting-star-two"
+    ></span>
+
+    <span
+      class="shooting-star shooting-star-three"
+    ></span>
+
+    <span
+      class="space-particle particle-one"
+    ></span>
+
+    <span
+      class="space-particle particle-two"
+    ></span>
+
+    <span
+      class="space-particle particle-three"
+    ></span>
+
+    <span
+      class="space-particle particle-four"
+    ></span>
+
+    <span
+      class="space-particle particle-five"
+    ></span>
+
+  </div>
+
+
+  <!-- =================================================== -->
+  <!-- HEADER -->
+  <!-- =================================================== -->
+
+  <header class="topbar">
+
+    <a
+      class="brand"
+      href="index.html"
+    >
+
+      <span class="brand-orb">
+        CP
+      </span>
+
+      <span>
+        CHILL PLANET
+      </span>
+
+    </a>
+
+
+    <nav id="mainNav">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="play.html">
+        Play
+      </a>
+
+      <a href="challenge.html">
+        Challenge
+      </a>
+
+      <a href="relax.html">
+        Relax
+      </a>
+
+      <a href="sponsors.html">
+        Sponsors
+      </a>
+
+      <a href="admin/login.html">
+        Admin
+      </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+      <button
+        class="icon-btn"
+        id="soundToggle"
+        type="button"
+        title="Toggle planet ambience"
+        aria-label="Toggle planet ambience"
+      >
+        ♫
+      </button>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =================================================== -->
+  <!-- HERO -->
+  <!-- =================================================== -->
+
+  <main class="hero container">
+
+
+    <!-- HERO LEFT -->
+
+    <section class="hero-copy">
+
+      <div class="planet-status">
+
+        <span class="status-dot"></span>
+
+        Chill Planet is online
+
+      </div>
+
+
+      <span class="eyebrow">
+        WELCOME TO ANOTHER WORLD
+      </span>
+
+
+      <h1>
+
+        Play.
+
+        <span>
+          Relax.
+        </span>
+
+        Share.
+
+      </h1>
+
+
+      <p class="hero-description">
+
+        Enter a world of endless questions,
+        Kamwenge knowledge,
+        football,
+        challenges,
+        peaceful moments,
+        achievements
+        and fun.
+
+      </p>
+
+
+      <p class="hero-subtext">
+
+        No fixed ending.
+
+        Play for as long as you want,
+        relax whenever you need,
+        and return anytime.
+
+      </p>
+
+
+      <div class="hero-actions">
+
+        <a
+          class="btn btn-primary btn-lg pulse-soft"
+          href="play.html"
+        >
+          Enter Chill Planet
+        </a>
+
+
+        <a
+          class="btn btn-ghost btn-lg"
+          href="relax.html"
+        >
+          Enter Relax Zone
+        </a>
+
+      </div>
+
+
+      <div class="mini-stats">
+
+        <div>
+
+          <strong>
+            ∞
+          </strong>
+
+          <span>
+            Endless Play
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <strong>
+            3
+          </strong>
+
+          <span>
+            Question Worlds
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <strong>
+            24/7
+          </strong>
+
+          <span>
+            Relax Zone
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <strong>
+            1 Tap
+          </strong>
+
+          <span>
+            Share
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HERO RIGHT -->
+
+    <section
+      class="planet-visual"
+      aria-label="Animated Chill Planet"
+    >
+
+      <div class="planet-scene">
+
+        <div class="planet-light"></div>
+
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="orbit orbit-c"></div>
+
+        <div class="planet-ring ring-one"></div>
+        <div class="planet-ring ring-two"></div>
+
+
+        <div class="planet">
+
+          <div class="planet-atmosphere"></div>
+
+          <div class="planet-glow"></div>
+
+          <div
+            class="planet-cloud planet-cloud-one"
+          ></div>
+
+          <div
+            class="planet-cloud planet-cloud-two"
+          ></div>
+
+
+          <div class="planet-core">
+
+            <small>
+              ENTER
+            </small>
+
+            CHILL
+
+            <br>
+
+            PLANET
+
+          </div>
+
+        </div>
+
+
+        <span class="moon moon-a"></span>
+        <span class="moon moon-b"></span>
+        <span class="moon moon-c"></span>
+
+
+        <span
+          class="satellite satellite-one"
+        >
+          ✦
+        </span>
+
+
+        <span
+          class="satellite satellite-two"
+        >
+          ◇
+        </span>
+
+
+        <!-- DEVELOPER ORBIT -->
+
+        <div class="dev-name-orbit">
+
+          <div class="floating-dev-name">
+
+            <span class="dev-name-star">
+              ✦
+            </span>
+
+            <span class="dev-name-text">
+              Eng. Amiim Tumwekwase
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="planet-caption">
+
+          <span>
+            ✦
+          </span>
+
+          Another world is waiting
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =================================================== -->
+  <!-- QUESTION WORLDS -->
+  <!-- =================================================== -->
+
+  <section
+    class="container section home-play-section"
+  >
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        CHOOSE YOUR WORLD
+      </span>
+
+
+      <h2>
+        Where do you want to explore?
+      </h2>
+
+
+      <p class="lead">
+
+        One question appears at a time.
+
+        There is no fixed last question.
+
+        Keep going until you decide to stop.
+
+      </p>
+
+    </div>
+
+
+    <div class="home-mode-grid">
+
+
+      <!-- KAMWENGE -->
+
+      <a
+        class="home-mode-card local"
+        href="play.html?mode=kamwenge"
+      >
+
+        <div class="mode-card-glow"></div>
+
+
+        <span class="mode-symbol">
+          ⌖
+        </span>
+
+
+        <span class="badge">
+          LOCAL WORLD
+        </span>
+
+
+        <h3>
+          Kamwenge
+        </h3>
+
+
+        <p>
+
+          Explore Kibale East,
+          sub-counties,
+          town councils,
+          parishes,
+          wards,
+          local places,
+          schools
+          and questions about Hon. Frank.
+
+        </p>
+
+
+        <span class="card-cta">
+          Enter Kamwenge →
+        </span>
+
+      </a>
+
+
+      <!-- GENERAL -->
+
+      <a
+        class="home-mode-card general"
+        href="play.html?mode=general"
+      >
+
+        <div class="mode-card-glow"></div>
+
+
+        <span class="mode-symbol">
+          ◎
+        </span>
+
+
+        <span class="badge">
+          GLOBAL WORLD
+        </span>
+
+
+        <h3>
+          General
+        </h3>
+
+
+        <p>
+
+          Uganda,
+          Africa,
+          the world,
+          science,
+          technology,
+          mathematics,
+          fun
+          and Premier League Big Six.
+
+        </p>
+
+
+        <span class="card-cta">
+          Explore General →
+        </span>
+
+      </a>
+
+
+      <!-- MIX EVERYTHING -->
+
+      <a
+        class="home-mode-card mix"
+        href="play.html?mode=mix"
+      >
+
+        <div class="mode-card-glow"></div>
+
+
+        <span class="mode-symbol">
+          ✦
+        </span>
+
+
+        <span class="badge">
+          RECOMMENDED
+        </span>
+
+
+        <h3>
+          Mix Everything
+        </h3>
+
+
+        <p>
+
+          Kamwenge,
+          general knowledge,
+          football
+          and everything else
+          combined into one endless journey.
+
+        </p>
+
+
+        <span class="card-cta">
+          Start the Journey →
+        </span>
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================================== -->
+  <!-- MORE OF THE PLANET -->
+  <!-- =================================================== -->
+
+  <section class="container section">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        MORE OF THE PLANET
+      </span>
+
+
+      <h2>
+        Chill Planet is more than a quiz.
+      </h2>
+
+
+      <p class="lead">
+
+        Compete,
+        take a break,
+        create something,
+        and share the experience.
+
+      </p>
+
+    </div>
+
+
+    <div class="feature-grid home-secondary-grid">
+
+
+      <a
+        class="feature-card violet"
+        href="challenge.html"
+      >
+
+        <span class="feature-icon">
+          ⚔
+        </span>
+
+
+        <h3>
+          Challenge
+        </h3>
+
+
+        <p>
+
+          Send your score to a friend
+          and see if they can beat you.
+
+        </p>
+
+      </a>
+
+
+      <a
+        class="feature-card teal"
+        href="relax.html"
+      >
+
+        <span class="feature-icon">
+          ☁
+        </span>
+
+
+        <h3>
+          Relax
+        </h3>
+
+
+        <p>
+
+          Slow down with hopeful words,
+          breathing,
+          reflections
+          and soft ambience.
+
+        </p>
+
+      </a>
+
+
+      <a
+        class="feature-card gold"
+        href="create-card.html"
+      >
+
+        <span class="feature-icon">
+          ✦
+        </span>
+
+
+        <h3>
+          Create & Share
+        </h3>
+
+
+        <p>
+
+          Turn your result
+          into a beautiful
+          Chill Planet achievement card.
+
+        </p>
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================================== -->
+  <!-- RELAX PREVIEW -->
+  <!-- =================================================== -->
+
+  <section class="container section">
+
+    <div class="relax-preview">
+
+      <div class="relax-preview-glow"></div>
+
+
+      <div>
+
+        <span class="eyebrow">
+          NEED A RESET?
+        </span>
+
+
+        <h2>
+          Step into the quiet side of the planet.
+        </h2>
+
+
+        <p>
+
+          No scores.
+
+          No competition.
+
+          Just breathing,
+          peaceful sounds
+          and hopeful thoughts.
+
+        </p>
+
+      </div>
+
+
+      <a
+        href="relax.html"
+        class="btn btn-primary"
+      >
+        Enter Relax Zone
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================================== -->
+  <!-- SPONSOR SECTION -->
+  <!-- =================================================== -->
+
+  <section
+    class="container sponsor-strip"
+    id="homeSponsor"
+  >
+
+    <div>
+
+      <span class="sponsor-label">
+        SPONSORED
+      </span>
+
+
+      <strong id="sponsorName">
+        Your brand could be here
+      </strong>
+
+
+      <p id="sponsorText">
+
+        Launch offer:
+        first two sponsors get one week free.
+
+      </p>
+
+    </div>
+
+
+    <a
+      href="sponsors.html"
+      class="btn btn-small btn-ghost"
+    >
+      Become a Sponsor
+    </a>
+
+  </section>
+
+
+  <!-- =================================================== -->
+  <!-- FINAL PORTAL -->
+  <!-- =================================================== -->
+
+  <section
+    class="container section final-portal"
+  >
+
+    <div class="final-portal-inner">
+
+      <span class="eyebrow">
+        READY?
+      </span>
+
+
+      <h2>
+        Your planet is waiting.
+      </h2>
+
+
+      <p>
+
+        Play.
+
+        Relax.
+
+        Challenge.
+
+        Share.
+
+        Then come back
+        and do it again.
+
+      </p>
+
+
+      <a
+        class="btn btn-primary btn-lg pulse-soft"
+        href="play.html?mode=mix"
+      >
+        Enter Chill Planet
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================================== -->
+  <!-- FOOTER -->
+  <!-- =================================================== -->
+
+  <footer class="footer">
+
+    <div>
+
+      <strong>
+        CHILL PLANET
+      </strong>
+
+      · Play. Relax. Share.
+
+    </div>
+
+
+    <span>
+      Built by Eng. Amiim Tumwekwase
+    </span>
+
+  </footer>
+
+
+  <!-- =================================================== -->
+  <!-- SCRIPTS -->
+  <!-- =================================================== -->
+
+  <script
+    type="module"
+    src="js/home.js"
+  ></script>
+
+
+  <script
+    type="module"
+    src="js/pwa.js"
+  ></script>
+
+
+  <script
+    src="js/navigation.js"
+  ></script>
+
+
+</body>
+
+</html>

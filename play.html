@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070B1A">
+  <title>Play — Chill Planet</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-orb">CP</span>
+    <span>CHILL PLANET</span>
+  </a>
+
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="play.html">Play</a>
+    <a href="challenge.html">Challenge</a>
+    <a href="relax.html">Relax</a>
+    <a href="sponsors.html">Sponsors</a>
+  </nav>
+
+  <div class="nav-actions">
+    
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main class="container game-shell">
+  <section id="modeScreen">
+    <span class="eyebrow">CHOOSE YOUR QUESTION WORLD</span>
+    <h1 class="mode-title">Where should the questions come from?</h1>
+    <p class="lead">One question at a time. Keep answering for as long as you want.</p>
+
+    <div class="mode-grid">
+      <button class="mode-card local" data-mode="kamwenge">
+        <span class="mode-symbol">⌖</span>
+        <span class="badge">LOCAL</span>
+        <h2>Kamwenge</h2>
+        <p>Kibale East, sub-counties, town councils, parishes, wards, local places and Hon. Frank.</p>
+        <small id="localCount">Local question bank</small>
+      </button>
+
+      <button class="mode-card general" data-mode="general">
+        <span class="mode-symbol">◎</span>
+        <span class="badge">WORLD</span>
+        <h2>General</h2>
+        <p>Uganda, Africa, world, science, technology, fun and Premier League Big Six.</p>
+        <small id="generalCount">General question bank</small>
+      </button>
+
+      <button class="mode-card mix" data-mode="mix">
+        <span class="mode-symbol">✦</span>
+        <span class="badge">RECOMMENDED</span>
+        <h2>Mix Everything</h2>
+        <p>Kamwenge and General questions shuffled together for the most unpredictable game.</p>
+        <small>Endless mixed play</small>
+      </button>
+    </div>
+  </section>
+
+  <section id="quizScreen" class="hidden">
+    <section class="game-top">
+      <div>
+        <button id="changeMode" class="text-button">← Change mode</button>
+        <span class="eyebrow" id="modeLabel">MIX EVERYTHING</span>
+        <h1>How far can you go?</h1>
+      </div>
+      <div class="score-pills">
+        <span>Score <b id="score">0</b></span>
+        <span>Streak <b id="streak">0</b></span>
+        <span>Best <b id="best">0</b></span>
+      </div>
+    </section>
+
+    <section class="quiz-card">
+      <div class="quiz-meta"><span id="category">General</span><span>Question <b id="questionNumber">1</b></span></div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <h2 id="questionText">Loading your question…</h2>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+      <div class="quiz-actions">
+        <button id="nextBtn" class="btn btn-primary" disabled>Next Question</button>
+        <button id="finishBtn" class="btn btn-ghost">Finish & View Result</button>
+      </div>
+    </section>
+    <p class="center muted">Questions keep changing. You can play as long as you want.</p>
+  </section>
+</main>
+
+<footer class="footer"><strong>CHILL PLANET</strong><span>Built by Eng. Amiim Tumwekwase</span></footer>
+<script type="module" src="js/play.js"></script><script src="js/pwa.js"></script>
+<script src="js/navigation.js"></script>
+</body>
+</html>

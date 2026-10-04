@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sponsors — Chill Planet</title><link rel="stylesheet" href="css/style.css"></head>
+<body><header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-orb">CP</span>
+    <span>CHILL PLANET</span>
+  </a>
+
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="play.html">Play</a>
+    <a href="challenge.html">Challenge</a>
+    <a href="relax.html">Relax</a>
+    <a href="sponsors.html">Sponsors</a>
+  </nav>
+
+  <div class="nav-actions">
+    
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main class="container section">
+<div class="section-heading"><span class="eyebrow">SPONSOR CHILL PLANET</span><h1>Put your brand inside the fun.</h1><p class="lead">Launch rate: <strong>UGX 10,000 per week</strong>. The first two approved sponsors receive one week free.</p></div>
+<div class="two-col">
+<section class="glass-card">
+  <h2>How it works</h2>
+  <ol class="steps"><li>Submit your business details.</li><li>Receive a Sponsor ID.</li><li>Pay using the payment instructions provided by the developer.</li><li>Send proof through WhatsApp.</li><li>The admin verifies and activates your advert.</li></ol>
+  <div class="notice">
+    <strong>Payment & WhatsApp:</strong> 0786598658<br>
+    After payment, send your Sponsor ID and payment screenshot on WhatsApp.
+    <div class="inline-actions">
+      <a class="btn btn-small btn-primary" href="https://wa.me/256786598658?text=Hello%20Chill%20Planet%2C%20I%20have%20paid%20for%20sponsorship.%20My%20Sponsor%20ID%20is%3A%20" target="_blank" rel="noopener">Send Proof on WhatsApp</a>
+    </div>
+    <small>Admin verification is required before activation.</small>
+  </div>
+</section>
+<section class="glass-card">
+  <h2>Sponsor application</h2>
+  <form id="sponsorForm">
+    <label>Business / sponsor name<input id="businessName" required></label>
+    <label>Contact person<input id="contactName" required></label>
+    <label>Phone / WhatsApp<input id="phone" required></label>
+    <label>Advert message<textarea id="adMessage" maxlength="140" required></textarea></label>
+    <label>Website or social link<input id="sponsorLink" type="url" placeholder="https://"></label>
+    <button class="btn btn-primary" type="submit">Submit Application</button>
+  </form>
+  <div id="sponsorResult" class="share-output hidden"></div>
+</section>
+</div>
+<section class="section"><div class="section-heading"><span class="eyebrow">ACTIVE SPONSORS</span><h2>Brands supporting the planet</h2></div><div id="sponsorGrid" class="feature-grid"></div></section>
+</main><footer class="footer"><span>Built by Eng. Amiim Tumwekwase</span></footer><script type="module" src="js/sponsors.js"></script><script src="js/navigation.js"></script>
+</body></html>

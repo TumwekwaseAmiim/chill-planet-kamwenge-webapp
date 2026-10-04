@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Challenge — Chill Planet</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css"></head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-orb">CP</span>
+    <span>CHILL PLANET</span>
+  </a>
+
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="play.html">Play</a>
+    <a href="challenge.html">Challenge</a>
+    <a href="relax.html">Relax</a>
+    <a href="sponsors.html">Sponsors</a>
+  </nav>
+
+  <div class="nav-actions">
+    
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main class="container section narrow">
+  <span class="eyebrow">CHALLENGE MODE</span><h1>Can your friend beat you?</h1>
+  <p class="lead">Create a challenge from your latest score or open a challenge link somebody sent you.</p>
+
+  <section id="incomingChallenge" class="glass-card hidden">
+    <span class="badge">INCOMING CHALLENGE</span>
+    <h2 id="challengerTitle">A friend challenged you</h2>
+    <p>Target score: <strong id="targetScore">0</strong>. Start a fresh round and try to beat it.</p>
+    <a id="acceptChallenge" class="btn btn-primary" href="play.html">Accept Challenge</a>
+  </section>
+
+  <section class="glass-card">
+    <h2>Create a challenge</h2>
+    <label>Your display name<input id="challengerName" type="text" placeholder="e.g. Amiim"></label>
+    <label>Your score<input id="challengeScore" type="number" min="0" value="0"></label>
+    <button id="createChallengeBtn" class="btn btn-primary">Create Challenge Link</button>
+    <div id="challengeOutput" class="share-output hidden">
+      <label>Challenge link<input id="challengeLink" readonly></label>
+      <div class="inline-actions"><button id="copyChallenge" class="btn btn-ghost">Copy Link</button><button id="shareChallenge" class="btn btn-ghost">Share</button></div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><span>Built by Eng. Amiim Tumwekwase</span></footer>
+<script type="module" src="js/challenge.js"></script>
+<script src="js/navigation.js"></script>
+</body></html>

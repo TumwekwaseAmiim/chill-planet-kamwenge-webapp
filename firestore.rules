@@ -1,0 +1,157 @@
+rules_version = '2';
+
+service cloud.firestore {
+
+  match /databases/{database}/documents {
+
+    // =========================================
+    // AUTH HELPERS
+    // =========================================
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn()
+        && exists(
+          /databases/$(database)/documents/admins/$(request.auth.uid)
+        );
+    }
+
+
+    // =========================================
+    // QUESTIONS
+    // =========================================
+
+    match /questions/{id} {
+
+      allow read:
+        if true;
+
+      allow create, update, delete:
+        if isAdmin();
+    }
+
+
+    // =========================================
+    // RELAX QUOTES
+    // =========================================
+
+    match /quotes/{id} {
+
+      allow read:
+        if true;
+
+      allow create, update, delete:
+        if isAdmin();
+    }
+
+
+    // =========================================
+    // ACTIVE SPONSORS
+    // =========================================
+
+    match /sponsors/{id} {
+
+      allow read:
+        if resource.data.status == "active"
+        || isAdmin();
+
+      allow create, update, delete:
+        if isAdmin();
+    }
+
+
+    // =========================================
+    // SPONSOR REQUESTS
+    // =========================================
+
+    match /sponsor_requests/{id} {
+
+      // Public users can submit sponsorship requests.
+      allow create:
+        if true;
+
+      // Only admin can view and manage requests.
+      allow read, update, delete:
+        if isAdmin();
+    }
+
+
+    // =========================================
+    // SCORES
+    // =========================================
+
+    match /scores/{id} {
+
+      // Players can submit results.
+      allow create:
+        if true;
+
+      // Only admin can read stored results.
+      allow read:
+        if isAdmin();
+
+      allow update, delete:
+        if isAdmin();
+    }
+
+
+    // =========================================
+    // CHALLENGES
+    // =========================================
+
+    match /challenges/{id} {
+
+      allow create, read:
+        if true;
+
+      allow update, delete:
+        if isAdmin();
+    }
+
+
+    // =========================================
+    // APP SETTINGS
+    // =========================================
+
+    match /settings/{id} {
+
+      allow read:
+        if true;
+
+      allow create, update, delete:
+        if isAdmin();
+    }
+
+
+    // =========================================
+    // ADMIN USERS
+    // =========================================
+
+    match /admins/{uid} {
+
+      // Signed-in admin can read only their own admin record.
+      allow read:
+        if isSignedIn()
+        && request.auth.uid == uid;
+
+      // Prevent frontend users from creating
+      // or changing admin privileges.
+      allow create, update, delete:
+        if false;
+    }
+
+
+    // =========================================
+    // DENY EVERYTHING ELSE
+    // =========================================
+
+    match /{document=**} {
+      allow read, write:
+        if false;
+    }
+
+  }
+}

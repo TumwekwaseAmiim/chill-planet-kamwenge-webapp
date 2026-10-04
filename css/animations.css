@@ -1,0 +1,1466 @@
+/* =========================================================
+   CHILL PLANET
+   ANIMATIONS & PLANET AMBIENCE
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE / SPACE SETUP
+   ========================================================= */
+
+.planet-body {
+  overflow-x: hidden;
+}
+
+.space-background {
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   2. STAR FIELDS
+   ========================================================= */
+
+.stars,
+.stars-2,
+.stars-3 {
+
+  position: absolute;
+
+  inset: -120px 0 0;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.78) 1px,
+      transparent 1.3px
+    );
+
+  background-size:
+    55px 55px;
+
+  opacity: .18;
+
+  animation:
+    starDrift 55s linear infinite;
+
+}
+
+.stars-2 {
+
+  background-size:
+    90px 90px;
+
+  opacity: .11;
+
+  animation-duration:
+    85s;
+
+  animation-direction:
+    reverse;
+
+}
+
+.stars-3 {
+
+  background-size:
+    145px 145px;
+
+  opacity: .07;
+
+  animation-duration:
+    120s;
+
+}
+
+
+/* =========================================================
+   3. NEBULA MOVEMENT
+   ========================================================= */
+
+.nebula-one {
+
+  animation:
+    nebulaFloatOne 22s ease-in-out infinite;
+
+}
+
+.nebula-two {
+
+  animation:
+    nebulaFloatTwo 28s ease-in-out infinite;
+
+}
+
+.nebula-three {
+
+  animation:
+    nebulaFloatThree 34s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   4. SHOOTING STARS
+   ========================================================= */
+
+.shooting-star {
+
+  position: absolute;
+
+  width: 130px;
+  height: 2px;
+
+  pointer-events: none;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.95)
+    );
+
+  box-shadow:
+    0 0 10px
+    rgba(255,255,255,.5);
+
+  transform:
+    rotate(-35deg);
+
+  opacity: 0;
+
+}
+
+.shooting-star::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  transform:
+    translateY(-50%);
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 0 14px white;
+
+}
+
+.shooting-star-one {
+
+  top: 16%;
+  left: -180px;
+
+  animation:
+    shootingStar 11s linear infinite;
+
+  animation-delay:
+    2s;
+
+}
+
+.shooting-star-two {
+
+  top: 46%;
+  left: -180px;
+
+  animation:
+    shootingStar 16s linear infinite;
+
+  animation-delay:
+    7s;
+
+}
+
+.shooting-star-three {
+
+  top: 72%;
+  left: -180px;
+
+  animation:
+    shootingStar 21s linear infinite;
+
+  animation-delay:
+    12s;
+
+}
+
+
+/* =========================================================
+   5. FLOATING SPACE PARTICLES
+   ========================================================= */
+
+.space-particle {
+
+  animation:
+    particleFloat 8s ease-in-out infinite;
+
+}
+
+.particle-two {
+
+  animation-duration:
+    11s;
+
+  animation-delay:
+    -4s;
+
+}
+
+.particle-three {
+
+  animation-duration:
+    9s;
+
+  animation-delay:
+    -2s;
+
+}
+
+.particle-four {
+
+  animation-duration:
+    13s;
+
+  animation-delay:
+    -6s;
+
+}
+
+.particle-five {
+
+  animation-duration:
+    10s;
+
+  animation-delay:
+    -3s;
+
+}
+
+
+/* =========================================================
+   6. HERO PLANET FLOAT
+   ========================================================= */
+
+.planet {
+
+  animation:
+    planetFloat 6s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   7. PLANET ATMOSPHERE / GLOW
+   ========================================================= */
+
+.planet-atmosphere {
+
+  animation:
+    atmospherePulse 5s ease-in-out infinite;
+
+}
+
+.planet-glow {
+
+  animation:
+    planetGlow 4s ease-in-out infinite;
+
+}
+
+.planet-light {
+
+  animation:
+    planetLightPulse 7s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   8. CLOUD MOVEMENT
+   ========================================================= */
+
+.planet-cloud-one {
+
+  animation:
+    cloudMoveOne 13s ease-in-out infinite;
+
+}
+
+.planet-cloud-two {
+
+  animation:
+    cloudMoveTwo 17s ease-in-out infinite reverse;
+
+}
+
+
+/* =========================================================
+   9. ORBITS
+   ========================================================= */
+
+.orbit-a {
+
+  animation:
+    spinA 16s linear infinite;
+
+}
+
+.orbit-b {
+
+  animation:
+    spinB 22s linear infinite reverse;
+
+}
+
+.orbit-c {
+
+  animation:
+    spinC 29s linear infinite;
+
+}
+
+
+/* =========================================================
+   10. PLANET RINGS
+   ========================================================= */
+
+.ring-one {
+
+  animation:
+    ringPulse 5s ease-in-out infinite;
+
+}
+
+.ring-two {
+
+  animation:
+    ringGlow 4s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   11. MOONS
+   ========================================================= */
+
+.moon-a {
+
+  animation:
+    moonFloatOne 4s ease-in-out infinite;
+
+}
+
+.moon-b {
+
+  animation:
+    moonFloatTwo 5.5s ease-in-out infinite;
+
+}
+
+.moon-c {
+
+  animation:
+    moonFloatThree 6.5s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   12. SATELLITES
+   ========================================================= */
+
+.satellite-one {
+
+  animation:
+    satelliteFloatOne 7s ease-in-out infinite;
+
+}
+
+.satellite-two {
+
+  animation:
+    satelliteFloatTwo 9s ease-in-out infinite reverse;
+
+}
+
+
+/* =========================================================
+   13. PLANET CAPTION
+   ========================================================= */
+
+.planet-caption {
+
+  animation:
+    captionFloat 5s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   14. STATUS DOT
+   ========================================================= */
+
+.status-dot {
+
+  animation:
+    statusPulse 1.8s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   15. BUTTON PULSE
+   ========================================================= */
+
+.pulse-soft {
+
+  animation:
+    buttonPulse 2.8s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   16. HOME CARD GLOW
+   ========================================================= */
+
+.mode-card-glow {
+
+  animation:
+    cardGlowFloat 6s ease-in-out infinite;
+
+}
+
+.home-mode-card:nth-child(2) .mode-card-glow {
+
+  animation-delay:
+    -2s;
+
+}
+
+.home-mode-card:nth-child(3) .mode-card-glow {
+
+  animation-delay:
+    -4s;
+
+}
+
+
+/* =========================================================
+   17. FEATURE ICON FLOAT
+   ========================================================= */
+
+.feature-card:hover .feature-icon {
+
+  animation:
+    iconBounce .65s ease;
+
+}
+
+
+/* =========================================================
+   18. RELAX PREVIEW GLOW
+   ========================================================= */
+
+.relax-preview-glow {
+
+  animation:
+    relaxGlow 8s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   19. BREATHING ORB
+   ========================================================= */
+
+.breathing-orb {
+
+  animation:
+    breathe 12s ease-in-out infinite;
+
+}
+
+.breathing-orb.paused {
+
+  animation-play-state:
+    paused;
+
+}
+
+
+/* =========================================================
+   20. ANSWER BUTTON FEEDBACK
+   ========================================================= */
+
+.answer-btn.correct {
+
+  animation:
+    answerCorrect .45s ease;
+
+}
+
+.answer-btn.wrong {
+
+  animation:
+    answerWrong .35s ease;
+
+}
+
+
+/* =========================================================
+   21. SCORE RING
+   ========================================================= */
+
+.score-ring {
+
+  animation:
+    scoreGlow 5s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   22. KEYFRAMES — STARS
+   ========================================================= */
+
+@keyframes starDrift {
+
+  from {
+
+    transform:
+      translate3d(0,0,0);
+
+  }
+
+  to {
+
+    transform:
+      translate3d(0,120px,0);
+
+  }
+
+}
+
+
+/* =========================================================
+   23. KEYFRAMES — NEBULAS
+   ========================================================= */
+
+@keyframes nebulaFloatOne {
+
+  0%,
+  100% {
+
+    transform:
+      translate3d(0,0,0)
+      scale(1);
+
+  }
+
+  50% {
+
+    transform:
+      translate3d(60px,35px,0)
+      scale(1.10);
+
+  }
+
+}
+
+
+@keyframes nebulaFloatTwo {
+
+  0%,
+  100% {
+
+    transform:
+      translate3d(0,0,0)
+      scale(1);
+
+  }
+
+  50% {
+
+    transform:
+      translate3d(-70px,50px,0)
+      scale(1.12);
+
+  }
+
+}
+
+
+@keyframes nebulaFloatThree {
+
+  0%,
+  100% {
+
+    transform:
+      translate3d(0,0,0)
+      scale(1);
+
+  }
+
+  50% {
+
+    transform:
+      translate3d(40px,-55px,0)
+      scale(1.15);
+
+  }
+
+}
+
+
+/* =========================================================
+   24. KEYFRAMES — SHOOTING STARS
+   ========================================================= */
+
+@keyframes shootingStar {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translate3d(0,0,0)
+      rotate(-35deg);
+
+  }
+
+  4% {
+
+    opacity: .9;
+
+  }
+
+  14% {
+
+    opacity: 0;
+
+    transform:
+      translate3d(125vw,70vh,0)
+      rotate(-35deg);
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translate3d(125vw,70vh,0)
+      rotate(-35deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   25. KEYFRAMES — PARTICLES
+   ========================================================= */
+
+@keyframes particleFloat {
+
+  0%,
+  100% {
+
+    transform:
+      translate3d(0,0,0)
+      scale(1);
+
+    opacity:
+      .45;
+
+  }
+
+  50% {
+
+    transform:
+      translate3d(14px,-28px,0)
+      scale(1.35);
+
+    opacity:
+      1;
+
+  }
+
+}
+
+
+/* =========================================================
+   26. KEYFRAMES — PLANET
+   ========================================================= */
+
+@keyframes planetFloat {
+
+  0%,
+  100% {
+
+    transform:
+      translateY(0)
+      rotate(-1deg);
+
+  }
+
+  50% {
+
+    transform:
+      translateY(-17px)
+      rotate(1deg);
+
+  }
+
+}
+
+
+@keyframes atmospherePulse {
+
+  0%,
+  100% {
+
+    opacity:
+      .80;
+
+  }
+
+  50% {
+
+    opacity:
+      1;
+
+  }
+
+}
+
+
+@keyframes planetGlow {
+
+  0%,
+  100% {
+
+    box-shadow:
+      0 0 15px
+      rgba(0,217,255,.08);
+
+    transform:
+      scale(1);
+
+  }
+
+  50% {
+
+    box-shadow:
+      0 0 38px
+      rgba(0,217,255,.22);
+
+    transform:
+      scale(1.025);
+
+  }
+
+}
+
+
+@keyframes planetLightPulse {
+
+  0%,
+  100% {
+
+    opacity:
+      .60;
+
+    transform:
+      scale(.95);
+
+  }
+
+  50% {
+
+    opacity:
+      1;
+
+    transform:
+      scale(1.12);
+
+  }
+
+}
+
+
+/* =========================================================
+   27. KEYFRAMES — CLOUDS
+   ========================================================= */
+
+@keyframes cloudMoveOne {
+
+  0%,
+  100% {
+
+    transform:
+      translateX(-8px)
+      rotate(-18deg);
+
+  }
+
+  50% {
+
+    transform:
+      translateX(28px)
+      rotate(-18deg);
+
+  }
+
+}
+
+
+@keyframes cloudMoveTwo {
+
+  0%,
+  100% {
+
+    transform:
+      translateX(10px)
+      rotate(18deg);
+
+  }
+
+  50% {
+
+    transform:
+      translateX(-28px)
+      rotate(18deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   28. KEYFRAMES — ORBITS
+   ========================================================= */
+
+@keyframes spinA {
+
+  from {
+
+    transform:
+      rotate(-20deg);
+
+  }
+
+  to {
+
+    transform:
+      rotate(340deg);
+
+  }
+
+}
+
+
+@keyframes spinB {
+
+  from {
+
+    transform:
+      rotate(38deg);
+
+  }
+
+  to {
+
+    transform:
+      rotate(-322deg);
+
+  }
+
+}
+
+
+@keyframes spinC {
+
+  from {
+
+    transform:
+      rotate(72deg);
+
+  }
+
+  to {
+
+    transform:
+      rotate(432deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   29. KEYFRAMES — RINGS
+   ========================================================= */
+
+@keyframes ringPulse {
+
+  0%,
+  100% {
+
+    opacity:
+      .45;
+
+    transform:
+      rotate(-15deg)
+      scale(1);
+
+  }
+
+  50% {
+
+    opacity:
+      .85;
+
+    transform:
+      rotate(-15deg)
+      scale(1.035);
+
+  }
+
+}
+
+
+@keyframes ringGlow {
+
+  0%,
+  100% {
+
+    opacity:
+      .45;
+
+  }
+
+  50% {
+
+    opacity:
+      1;
+
+  }
+
+}
+
+
+/* =========================================================
+   30. KEYFRAMES — MOONS
+   ========================================================= */
+
+@keyframes moonFloatOne {
+
+  0%,
+  100% {
+
+    transform:
+      translate3d(0,0,0)
+      scale(1);
+
+  }
+
+  50% {
+
+    transform:
+      translate3d(9px,-18px,0)
+      scale(1.12);
+
+  }
+
+}
+
+
+@keyframes moonFloatTwo {
+
+  0%,
+  100% {
+
+    transform:
+      translate3d(0,0,0);
+
+  }
+
+  50% {
+
+    transform:
+      translate3d(-14px,16px,0);
+
+  }
+
+}
+
+
+@keyframes moonFloatThree {
+
+  0%,
+  100% {
+
+    transform:
+      translate3d(0,0,0)
+      scale(.9);
+
+  }
+
+  50% {
+
+    transform:
+      translate3d(-8px,-15px,0)
+      scale(1.25);
+
+  }
+
+}
+
+
+/* =========================================================
+   31. KEYFRAMES — SATELLITES
+   ========================================================= */
+
+@keyframes satelliteFloatOne {
+
+  0%,
+  100% {
+
+    transform:
+      translate3d(0,0,0)
+      rotate(0deg);
+
+  }
+
+  50% {
+
+    transform:
+      translate3d(16px,-13px,0)
+      rotate(25deg);
+
+  }
+
+}
+
+
+@keyframes satelliteFloatTwo {
+
+  0%,
+  100% {
+
+    transform:
+      translate3d(0,0,0)
+      rotate(0deg);
+
+  }
+
+  50% {
+
+    transform:
+      translate3d(-14px,18px,0)
+      rotate(-28deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   32. KEYFRAMES — CAPTION
+   ========================================================= */
+
+@keyframes captionFloat {
+
+  0%,
+  100% {
+
+    transform:
+      translateX(-50%)
+      translateY(0);
+
+  }
+
+  50% {
+
+    transform:
+      translateX(-50%)
+      translateY(-6px);
+
+  }
+
+}
+
+
+/* =========================================================
+   33. KEYFRAMES — STATUS
+   ========================================================= */
+
+@keyframes statusPulse {
+
+  0%,
+  100% {
+
+    opacity:
+      .65;
+
+    box-shadow:
+      0 0 8px
+      rgba(57,229,140,.40);
+
+  }
+
+  50% {
+
+    opacity:
+      1;
+
+    box-shadow:
+      0 0 18px
+      rgba(57,229,140,1);
+
+  }
+
+}
+
+
+/* =========================================================
+   34. KEYFRAMES — BUTTON
+   ========================================================= */
+
+@keyframes buttonPulse {
+
+  0%,
+  100% {
+
+    box-shadow:
+      0 14px 34px
+      rgba(0,217,255,.18);
+
+  }
+
+  50% {
+
+    box-shadow:
+      0 14px 50px
+      rgba(124,77,255,.42);
+
+  }
+
+}
+
+
+/* =========================================================
+   35. KEYFRAMES — CARD GLOW
+   ========================================================= */
+
+@keyframes cardGlowFloat {
+
+  0%,
+  100% {
+
+    transform:
+      translate3d(0,0,0)
+      scale(1);
+
+    opacity:
+      .55;
+
+  }
+
+  50% {
+
+    transform:
+      translate3d(-15px,18px,0)
+      scale(1.25);
+
+    opacity:
+      .95;
+
+  }
+
+}
+
+
+/* =========================================================
+   36. KEYFRAMES — ICON
+   ========================================================= */
+
+@keyframes iconBounce {
+
+  0%,
+  100% {
+
+    transform:
+      translateY(0);
+
+  }
+
+  40% {
+
+    transform:
+      translateY(-8px)
+      scale(1.10);
+
+  }
+
+  70% {
+
+    transform:
+      translateY(2px);
+
+  }
+
+}
+
+
+/* =========================================================
+   37. KEYFRAMES — RELAX GLOW
+   ========================================================= */
+
+@keyframes relaxGlow {
+
+  0%,
+  100% {
+
+    transform:
+      scale(1)
+      translate3d(0,0,0);
+
+    opacity:
+      .45;
+
+  }
+
+  50% {
+
+    transform:
+      scale(1.25)
+      translate3d(-30px,20px,0);
+
+    opacity:
+      .85;
+
+  }
+
+}
+
+
+/* =========================================================
+   38. KEYFRAMES — BREATHING
+   ========================================================= */
+
+@keyframes breathe {
+
+  0% {
+
+    transform:
+      scale(.82);
+
+    filter:
+      saturate(.80);
+
+  }
+
+  33% {
+
+    transform:
+      scale(1.08);
+
+    filter:
+      saturate(1.2);
+
+  }
+
+  50% {
+
+    transform:
+      scale(1.08);
+
+    filter:
+      saturate(1.2);
+
+  }
+
+  83% {
+
+    transform:
+      scale(.82);
+
+    filter:
+      saturate(.88);
+
+  }
+
+  100% {
+
+    transform:
+      scale(.82);
+
+    filter:
+      saturate(.80);
+
+  }
+
+}
+
+
+/* =========================================================
+   39. KEYFRAMES — ANSWER FEEDBACK
+   ========================================================= */
+
+@keyframes answerCorrect {
+
+  0% {
+
+    transform:
+      scale(1);
+
+  }
+
+  45% {
+
+    transform:
+      scale(1.025);
+
+  }
+
+  100% {
+
+    transform:
+      scale(1);
+
+  }
+
+}
+
+
+@keyframes answerWrong {
+
+  0%,
+  100% {
+
+    transform:
+      translateX(0);
+
+  }
+
+  25% {
+
+    transform:
+      translateX(-5px);
+
+  }
+
+  50% {
+
+    transform:
+      translateX(5px);
+
+  }
+
+  75% {
+
+    transform:
+      translateX(-3px);
+
+  }
+
+}
+
+
+/* =========================================================
+   40. KEYFRAMES — SCORE
+   ========================================================= */
+
+@keyframes scoreGlow {
+
+  0%,
+  100% {
+
+    box-shadow:
+      0 0 35px
+      rgba(124,77,255,.25);
+
+  }
+
+  50% {
+
+    box-shadow:
+      0 0 58px
+      rgba(0,217,255,.35);
+
+  }
+
+}
+
+
+/* =========================================================
+   41. REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration:
+      .01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    scroll-behavior:
+      auto !important;
+
+  }
+
+}
+
+
+/* =========================================================
+   42. MOBILE PERFORMANCE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+  .nebula {
+
+    filter:
+      blur(90px);
+
+    opacity:
+      .12;
+
+  }
+
+  .shooting-star-three {
+    display: none;
+  }
+
+  .particle-four,
+  .particle-five {
+    display: none;
+  }
+
+  .stars-3 {
+    opacity: .04;
+  }
+
+}

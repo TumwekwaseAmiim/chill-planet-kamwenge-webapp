@@ -1,0 +1,17 @@
+# Local/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment / secrets
+.env
+.env.*
+service-account*.json
+firebase-adminsdk*.json
+*.pem
+*.key
+
+# Dependencies/build output
+node_modules/
+dist/

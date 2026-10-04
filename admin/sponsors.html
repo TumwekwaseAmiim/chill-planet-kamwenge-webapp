@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#070B1A"
+  >
+
+  <title>
+    Sponsors Admin — Chill Planet
+  </title>
+
+  <meta
+    name="description"
+    content="Manage Chill Planet sponsor requests, payment verification, sponsor images and activations."
+  >
+
+  <meta
+    name="author"
+    content="Eng. Amiim Tumwekwase"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="../assets/icons/icon-32.png"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/style.css"
+  >
+
+</head>
+
+
+<body class="admin-body">
+
+
+<!-- ===================================================== -->
+<!-- ADMIN NAVIGATION -->
+<!-- ===================================================== -->
+
+<header class="topbar compact">
+
+  <a
+    class="brand"
+    href="dashboard.html"
+  >
+
+    <span class="brand-orb">
+      CP
+    </span>
+
+    <span>
+      ADMIN
+    </span>
+
+  </a>
+
+
+  <nav>
+
+    <a href="dashboard.html">
+      Dashboard
+    </a>
+
+    <a href="questions.html">
+      Questions
+    </a>
+
+    <a
+      class="active"
+      href="sponsors.html"
+    >
+      Sponsors
+    </a>
+
+    <a href="content.html">
+      Content
+    </a>
+
+  </nav>
+
+</header>
+
+
+<!-- ===================================================== -->
+<!-- MAIN -->
+<!-- ===================================================== -->
+
+<main class="container section">
+
+
+  <!-- =================================================== -->
+  <!-- PAGE HEADER -->
+  <!-- =================================================== -->
+
+  <span class="eyebrow">
+    SPONSOR DESK
+  </span>
+
+
+  <h1>
+    Approve & manage sponsors
+  </h1>
+
+
+  <p class="lead">
+
+    Review sponsor applications,
+    verify payment proof manually,
+    upload sponsor branding and
+    activate approved sponsors.
+
+  </p>
+
+
+
+  <!-- =================================================== -->
+  <!-- CLOUDINARY INFO -->
+  <!-- =================================================== -->
+
+  <section
+    class="glass-card"
+    style="margin-bottom:24px;"
+  >
+
+    <span class="badge">
+      SPONSOR MEDIA
+    </span>
+
+
+    <h2>
+      Sponsor Logo / Image
+    </h2>
+
+
+    <p class="muted">
+
+      Sponsor images are uploaded
+      securely to Cloudinary when
+      you choose an image for an
+      approved sponsor.
+
+    </p>
+
+
+    <div
+      class="admin-form"
+      style="
+        margin-top:20px;
+        display:grid;
+        gap:16px;
+      "
+    >
+
+
+      <!-- Sponsor selection -->
+
+      <label>
+
+        Sponsor Request
+
+        <select
+          id="sponsorImageRequest"
+        >
+
+          <option value="">
+            Select sponsor
+          </option>
+
+        </select>
+
+      </label>
+
+
+      <!-- Sponsor image -->
+
+      <label>
+
+        Sponsor Logo / Image
+
+        <input
+          type="file"
+          id="sponsorImage"
+          accept="image/png,image/jpeg,image/webp"
+        >
+
+      </label>
+
+
+      <!-- Preview -->
+
+      <div
+        id="sponsorImagePreviewWrap"
+        style="
+          display:none;
+          margin-top:8px;
+        "
+      >
+
+        <p class="muted">
+          Preview
+        </p>
+
+
+        <img
+          id="sponsorImagePreview"
+          src=""
+          alt="Sponsor image preview"
+          style="
+            width:180px;
+            max-width:100%;
+            border-radius:18px;
+            object-fit:contain;
+            background:#11172A;
+            padding:12px;
+          "
+        >
+
+      </div>
+
+
+      <!-- Upload status -->
+
+      <p
+        id="sponsorUploadStatus"
+        class="muted"
+        aria-live="polite"
+      ></p>
+
+
+      <!-- Upload button -->
+
+      <div>
+
+        <button
+          type="button"
+          id="uploadSponsorImage"
+          class="btn btn-primary"
+        >
+          Upload Sponsor Image
+        </button>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================================== -->
+  <!-- SPONSOR REQUESTS -->
+  <!-- =================================================== -->
+
+  <section class="glass-card">
+
+    <div
+      style="
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:16px;
+        flex-wrap:wrap;
+        margin-bottom:20px;
+      "
+    >
+
+      <div>
+
+        <span class="badge">
+          REQUESTS
+        </span>
+
+        <h2>
+          Sponsor Applications
+        </h2>
+
+      </div>
+
+
+      <button
+        type="button"
+        id="refreshSponsors"
+        class="btn btn-small btn-ghost"
+      >
+        Refresh
+      </button>
+
+    </div>
+
+
+    <div
+      id="sponsorAdminList"
+      class="admin-list"
+    >
+
+      <p class="muted">
+        Loading sponsor requests...
+      </p>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
+
+<footer class="footer">
+
+  <span>
+    Chill Planet Admin
+  </span>
+
+  <span>
+    Built by Eng. Amiim Tumwekwase
+  </span>
+
+</footer>
+
+
+
+<!-- ===================================================== -->
+<!-- JAVASCRIPT -->
+<!-- ===================================================== -->
+
+<script
+  type="module"
+  src="../js/admin.js"
+></script>
+
+
+</body>
+
+</html>

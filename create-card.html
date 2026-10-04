@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Create Card — Chill Planet</title><link rel="stylesheet" href="css/style.css"></head>
+<body><header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-orb">CP</span>
+    <span>CHILL PLANET</span>
+  </a>
+
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="play.html">Play</a>
+    <a href="challenge.html">Challenge</a>
+    <a href="relax.html">Relax</a>
+    <a href="sponsors.html">Sponsors</a>
+  </nav>
+
+  <div class="nav-actions">
+    
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main class="container section card-builder-layout">
+<section class="glass-card builder-controls">
+  <span class="eyebrow">CREATE & SHARE</span><h1>Make your achievement card</h1>
+  <label>Your name<input id="cardName" type="text" placeholder="Your name"></label>
+  <label>Your score<input id="cardScore" type="number" min="0" value="0"></label>
+  <label>Optional photo<input id="photoInput" type="file" accept="image/*"></label>
+  <label>Challenge text<input id="challengeText" type="text" value="Can you beat me?"></label>
+  <button id="generateCard" class="btn btn-primary">Update Card</button>
+  <button id="downloadCard" class="btn btn-ghost">Download PNG</button>
+  <button id="shareCard" class="btn btn-ghost">Share Card</button>
+</section>
+<section class="canvas-wrap">
+  <canvas id="shareCanvas" width="1080" height="1350" aria-label="Achievement share card"></canvas>
+</section>
+</main><footer class="footer"><span>Built by Eng. Amiim Tumwekwase</span></footer><script type="module" src="js/card-generator.js"></script><script src="js/navigation.js"></script>
+</body></html>

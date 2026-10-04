@@ -1,0 +1,23 @@
+CHILL PLANET — CLEANED BUILD
+Date: 2026-10-04
+
+Cleaned and standardized:
+- One Firebase core file only: js/firebase-core.js
+- auth.js, admin.js, questions.js, sponsors.js and home.js all use the same Firebase core
+- Removed experimental firebase-core-fixed file
+- Removed temporary ?v= cache-busting imports from admin pages
+- Service worker changed to network-first for HTML/JS/CSS during development
+- Service worker no longer intercepts Firebase/CDN/API requests
+- PWA registration requests service-worker updates without HTTP cache
+- Public Play page now syncs Firestore custom questions before starting
+- Home sponsor preview now reads active sponsors from Firestore
+- Admin link remains in the public Home navigation
+- Sponsor approval flow remains in Admin > Sponsors (Activate 7 Days / Pending / Delete)
+- JavaScript syntax checks passed
+- Local HTML script/style references checked: no missing files
+
+Important after replacing an older copy:
+1. Extract this ZIP into a fresh folder.
+2. Open that fresh folder in VS Code.
+3. Start Live Server from its index.html.
+4. If an old service worker from a previous copy is still controlling localhost, unregister it once in DevTools > Application > Service Workers, then reload.

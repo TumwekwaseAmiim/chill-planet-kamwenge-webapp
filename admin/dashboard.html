@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Admin Dashboard — Chill Planet
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="../css/style.css"
+  >
+</head>
+
+
+<body class="admin-body">
+
+
+  <!-- =====================================================
+       ADMIN HEADER
+  ====================================================== -->
+
+  <header class="topbar compact">
+
+    <a
+      class="brand"
+      href="dashboard.html"
+    >
+
+      <span class="brand-orb">
+        CP
+      </span>
+
+      <span>
+        ADMIN
+      </span>
+
+    </a>
+
+
+    <nav id="adminNav">
+
+      <a
+        href="dashboard.html"
+        class="active"
+      >
+        Dashboard
+      </a>
+
+      <a href="questions.html">
+        Questions
+      </a>
+
+      <a href="sponsors.html">
+        Sponsors
+      </a>
+
+      <a href="content.html">
+        Relax Content
+      </a>
+
+      <a href="../index.html">
+        Open App
+      </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+
+      <button
+        id="logoutBtn"
+        class="btn btn-small btn-ghost"
+      >
+        Log out
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN DASHBOARD
+  ====================================================== -->
+
+  <main class="container section">
+
+
+    <!-- PAGE TITLE -->
+
+    <span class="eyebrow">
+      CONTROL CENTER
+    </span>
+
+    <h1>
+      Chill Planet Dashboard
+    </h1>
+
+    <p class="lead">
+
+      Manage questions,
+      sponsors,
+      relaxation content
+      and the public Chill Planet experience.
+
+    </p>
+
+
+    <!-- ===================================================
+         DASHBOARD STATISTICS
+    ==================================================== -->
+
+    <div class="admin-stats">
+
+
+      <!-- KAMWENGE -->
+
+      <div class="stat-card">
+
+        <span>
+          Kamwenge Question Sources
+        </span>
+
+        <b id="kamwengeQuestionCount">
+          0
+        </b>
+
+      </div>
+
+
+      <!-- GENERAL -->
+
+      <div class="stat-card">
+
+        <span>
+          General Question Sources
+        </span>
+
+        <b id="generalQuestionCount">
+          0
+        </b>
+
+      </div>
+
+
+      <!-- SPORTS -->
+
+      <div class="stat-card">
+
+        <span>
+          Big Six Sources
+        </span>
+
+        <b id="sportsQuestionCount">
+          0
+        </b>
+
+      </div>
+
+
+      <!-- ENDLESS MODE -->
+
+      <div class="stat-card">
+
+        <span>
+          Question Mode
+        </span>
+
+        <b class="endless-stat">
+          ∞
+        </b>
+
+        <small class="muted">
+          Endless
+        </small>
+
+      </div>
+
+
+      <!-- SPONSOR REQUESTS -->
+
+      <div class="stat-card">
+
+        <span>
+          Sponsor Requests
+        </span>
+
+        <b id="requestCount">
+          0
+        </b>
+
+      </div>
+
+
+      <!-- ACTIVE SPONSORS -->
+
+      <div class="stat-card">
+
+        <span>
+          Active Sponsors
+        </span>
+
+        <b id="activeSponsorCount">
+          0
+        </b>
+
+      </div>
+
+
+      <!-- PLAYS -->
+
+      <div class="stat-card">
+
+        <span>
+          Local Plays
+        </span>
+
+        <b id="playCount">
+          0
+        </b>
+
+      </div>
+
+
+    </div>
+
+
+    <!-- ===================================================
+         MANAGEMENT AREAS
+    ==================================================== -->
+
+    <div class="feature-grid admin-links">
+
+
+      <!-- QUESTIONS -->
+
+      <a
+        class="feature-card cyan"
+        href="questions.html"
+      >
+
+        <span class="feature-icon">
+          ?
+        </span>
+
+        <h3>
+          Questions
+        </h3>
+
+        <p>
+          Add and manage custom Kamwenge
+          and general quiz questions.
+        </p>
+
+      </a>
+
+
+      <!-- SPONSORS -->
+
+      <a
+        class="feature-card gold"
+        href="sponsors.html"
+      >
+
+        <span class="feature-icon">
+          ★
+        </span>
+
+        <h3>
+          Sponsors
+        </h3>
+
+        <p>
+          Review sponsor requests,
+          verify payment
+          and activate adverts.
+        </p>
+
+      </a>
+
+
+      <!-- RELAX CONTENT -->
+
+      <a
+        class="feature-card teal"
+        href="content.html"
+      >
+
+        <span class="feature-icon">
+          ☁
+        </span>
+
+        <h3>
+          Relax Content
+        </h3>
+
+        <p>
+          Manage hopeful quotes,
+          reflections
+          and Relax Zone content.
+        </p>
+
+      </a>
+
+
+      <!-- OPEN PUBLIC APP -->
+
+      <a
+        class="feature-card violet"
+        href="../index.html"
+      >
+
+        <span class="feature-icon">
+          ✦
+        </span>
+
+        <h3>
+          Open App
+        </h3>
+
+        <p>
+          Leave the dashboard
+          and view Chill Planet
+          exactly as users see it.
+        </p>
+
+      </a>
+
+
+    </div>
+
+
+    <!-- ===================================================
+         QUICK ACCESS
+    ==================================================== -->
+
+    <section class="glass-card">
+
+      <span class="eyebrow">
+        QUICK ACCESS
+      </span>
+
+      <h2>
+        Jump anywhere
+      </h2>
+
+
+      <div class="inline-actions">
+
+        <a
+          class="btn btn-primary"
+          href="../index.html"
+        >
+          Go to Home
+        </a>
+
+
+        <a
+          class="btn btn-ghost"
+          href="../play.html"
+        >
+          Test Play
+        </a>
+
+
+        <a
+          class="btn btn-ghost"
+          href="../relax.html"
+        >
+          Test Relax
+        </a>
+
+
+        <a
+          class="btn btn-ghost"
+          href="../sponsors.html"
+        >
+          View Sponsors
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="footer">
+
+    <div>
+
+      <strong>
+        CHILL PLANET ADMIN
+      </strong>
+
+    </div>
+
+    <span>
+      Built by Eng. Amiim Tumwekwase
+    </span>
+
+  </footer>
+
+
+  <!-- =====================================================
+       SCRIPTS
+  ====================================================== -->
+
+  <script
+    type="module"
+    src="../js/admin.js"
+  ></script>
+
+  <script
+    src="../js/navigation.js"
+  ></script>
+
+
+</body>
+
+</html>
